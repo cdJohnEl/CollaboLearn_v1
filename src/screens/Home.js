@@ -79,6 +79,8 @@ const Homepage = () => {
       </button>
     );
   }
+
+
   // Course list
   var courseList = [];
   for (let i = 0; i < popularCourse.length; i++) {
@@ -160,6 +162,8 @@ const Homepage = () => {
         </h2>
         <div className="top-tutors rel flex">{topTutorsList}</div>
       </div>
+
+      
     </div>
   );
 };

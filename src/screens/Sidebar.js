@@ -30,7 +30,7 @@ const Sidebar = () => {
             "link bl noul flex c333" + (currentPage === nav[i].slug ? "on" : "")
           }
         >
-          {React.cloneElement(nav[i].icon, { className: "s20" })}
+          {React.cloneElement(nav[i].icon, { className: "s20 " })}
           {/* <FaHouse className={"s20 " + nav[i].icon} /> */}
           <span className="lbl s20">{nav[i].label}</span>
         </a>

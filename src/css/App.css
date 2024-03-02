@@ -1,3 +1,95 @@
+.App{
+    padding: 0px 20px 0px 0px;
+}
+
+/*
+Splash
+*/
+.splash{}
+.splash img{
+    height: 100px;
+}
+
+/*
+VIDEO PLAYER
+*/
+.player{
+    width: 100%;
+    height: 55%;
+    background: #000;
+}
+.player video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.player .ctrls{
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 90px;
+    background: rgba(62, 62, 62, 0.54);
+    z-index: 9;
+    padding: 0px 15px;
+}
+.player .ctrls .pp-btn{
+    border: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: #ea5252;
+    color: #fff;    
+}
+.player .ctrls .timer{
+    flex: 1;
+    margin: 0px;
+    text-align: center;
+    
+}
+.player .ctrls .slider{
+    flex: 3;
+}
+.player .ctrls .slider .prog{
+    width: 100%;
+    height: 10px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+.player .ctrls .slider .bar{
+    width: 40%;
+    height: 10px;
+    background: #ea5252;
+    border-radius: 10px;
+}
+.player .ctrls .slider .bar .knob{
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 100%;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    box-shadow: 0px 0px 5px #000;
+}
+.player .ctrls .vol{
+    border: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: rgba(234, 82, 82, 0);
+    color: #fff;
+    margin: 0px 10px;
+}
+.player .ctrls .fs{
+    border: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: rgba(234, 82, 82, 0);
+    color: #fff;
+    margin: 0px 10px;
+}
+
 /*
 SIDEBAR
 */
@@ -23,7 +115,9 @@ SIDEBAR
 .sidebar .nav li a .icon{
     margin-right: 10px;
 }
-.sidebar .nav li a .lbl{}
+.sidebar .nav li a .lbl{
+    padding-left: 20px;
+}
 
 .sidebar .nav li a.active,
 .sidebar .nav li a.on{
@@ -133,10 +227,10 @@ HOME PAGE
 }
 .section .courses{}
 .section .courses a{
-    flex: 1;
+    /* flex: 1; */
     margin-right: 25px; 
 }
-.home-page .section .courses .block{
+ .section .courses .block{
     width: 250px;
     height: 375px;
     background: #e2e2e2;
@@ -147,11 +241,11 @@ HOME PAGE
 .section .courses a:last-child{
     margin-right: auto;
 }
-.home-page .section .courses .block .user{
+.section .courses .block .user{
     padding: 20px;
     z-index: 1;
 }
-.home-page .section .courses .block .user .pic{
+ .section .courses .block .user .pic{
     width: 40px;
     height: 40px;
     border: 2px #fff solid;
@@ -159,7 +253,7 @@ HOME PAGE
     padding: 3px;
     margin-right: 10px;
 }
-.home-page .section .courses .block .user .pic img{
+.section .courses .block .user .pic img{
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -168,7 +262,7 @@ HOME PAGE
 .section .courses .block .user .meta .name{}
 .section .courses .block .user .meta .uname{}
 
-.home-page .section .courses .block  .duration{
+.section .courses .block  .duration{
     top: 95px;
     left: 20px;
     background: #ea5252;
@@ -178,7 +272,7 @@ HOME PAGE
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.33);
     z-index: 1;
 }
-.home-page .section .courses .block .course-title{
+.section .courses .block .course-title{
     bottom: 15px;
     left: 15px;
     right: 15px;
@@ -216,13 +310,13 @@ RIGHTBAR
 */
 .rightbar{
     flex: 1;
-    padding: 20px 0px;
+    padding: 20px 8px;
 }
 
 .rightbar .search-box{
     margin: 10px 0px;
 }
-.rightbar .search-box .qry{
+.rightbar .search-box .query{
     flex: 1;
     border: 0px;
     padding: 15px;
@@ -230,7 +324,7 @@ RIGHTBAR
     margin-right: 10px;
     border-radius: 5px;
 }
-.rightbar .search-box .qry:focus{
+.rightbar .search-box .query:focus{
     background: #e0e0e0;
 }
 .rightbar .search-box .go{
@@ -238,6 +332,7 @@ RIGHTBAR
     background: #ea5252;
     padding: 0px 20px;
     border-radius: 5px;
+    color: #f1f1f1;
 }
 .rightbar .search-box .go:hover{
     background: #d24444;
@@ -261,8 +356,10 @@ RIGHTBAR
     background: #e5fcfb;
     height: 185px;
     margin-top: 14px;
+    margin-bottom: 14px;
     border-radius: 20px;
     overflow: hidden;
+    padding-bottom: 20px;
 }
 .rightbar .special-offer .meta{
     padding: 30px;
@@ -279,7 +376,8 @@ RIGHTBAR
     border: 0px;
     border-radius: 10px;
     padding: 14px 20px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    margin-bottom: 50px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 .rightbar .special-offer .meta button:hover{
@@ -302,3 +400,124 @@ RIGHTBAR
     transform: translateY(-50%);
     border: 40px rgba(255, 255, 255, 0.45) solid;
 }
+
+
+/*
+COURSE PREVIEW
+*/
+.course-page{}
+.course-info{flex: 1;}
+.course-page .tutor{}
+.course-page .tutor .pic{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #eee;
+    margin-right: 10px;
+}
+.course-page .tutor .pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.course-page .tutor .meta{}
+.course-page .tutor .meta .name{}
+.course-page .tutor .meta .uname{}
+.course-page .course-meta{
+    padding: 40px 0px;
+}
+.course-page .course-meta .title{
+    font-weight: 600;
+}
+.course-page .course-meta .about{}
+
+.course-videos{
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0px;
+}
+.course-videos a{
+    margin: 10px 0px;
+}
+.course-videos a .id{
+    background: #ea5252;
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    padding: 14px 20px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+.course-videos a .meta{}
+.course-videos a .meta .lbl{}
+.course-videos a .meta .dur{}
+.course-videos a:hover{}
+
+.course-preview{
+    flex: 2;
+    margin-left: 20px;
+}
+
+.extra-block{}
+.chat{
+    flex: 1;
+    margin-right: 50px;
+}
+.chat .messages{
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    padding: 30px 0px;
+}
+.chat .messages .bubble{
+    align-self: flex-start;
+    margin: 7px 0px;
+    width: 100%;
+}
+.chat .messages .bubble .txt{
+    background: #d6d6d6;
+    line-height: 1;
+    padding: 14px;
+    border-radius: 20px 20px 20px 3px;
+}
+.chat .messages .bubble-mine{
+    text-align: right;
+}
+.chat .messages .bubble-mine .txt{
+    border-radius: 20px 20px 3px 20px !important;
+    background: #272727;
+    color: #fff;
+}
+
+.now-watching{
+    flex: 1;
+}
+.now-watching .tooltip{
+    background: #ea5252;
+    top: 50px;
+    right: 0px;
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+.now-watching .you-list{margin-top :25px;}
+.now-watching .you{
+    margin-bottom: 30px;
+}
+.now-watching .you .pic{
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    background: #ddd;
+    border-radius: 100%;
+}
+.now-watching .you .pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.now-watching .you .meta{}
+.now-watching .you .meta .name{}
+.now-watching .you .meta .uname{}
+
+
+
