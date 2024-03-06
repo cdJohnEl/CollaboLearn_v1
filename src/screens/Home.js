@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 
 import Course1 from "../ui/course-1.png";
+import { NavLink } from "react-router-dom";
 
 const Homepage = () => {
+
+  useEffect(() => {
+    document.title = "Home";
+})
+
   const [popularCourse, setPopularCourse] = React.useState([
     {
       ID: 1,
@@ -85,7 +92,7 @@ const Homepage = () => {
   var courseList = [];
   for (let i = 0; i < popularCourse.length; i++) {
     courseList.push(
-      <a href="#" className="course rel" key={"popular-course" + i}>
+      <NavLink to={"/course/" + popularCourse[i].ID} className="course rel" key={"popular-course" + i}>
         <div
           className="block rel"
           style={{
@@ -115,7 +122,7 @@ const Homepage = () => {
             <h2 className="s15 fontb cfff">{popularCourse[i].title}</h2>
           </div>
         </div>
-      </a>
+      </NavLink>
     );
   }
   // top tutors list

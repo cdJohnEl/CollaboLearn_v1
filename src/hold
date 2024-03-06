@@ -1,0 +1,67 @@
+import "./css/App.css";
+import "./css/props.css";
+
+// Screens
+import Header from "./screens/header";
+import Sidebar from "./screens/Sidebar";
+import Homepage from "./screens/Home";
+import Coursepage from "./screens/Course";
+import ExplorePage from "./screens/Discover";
+import CategoriesPage from "./screens/Categories";
+import MyCoursesPage from "./screens/mycourses";
+
+import Rightbar from "./screens/rightbar";
+
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+
+import * as fire_base from "firebase/app";
+
+global.firebase = fire_base;
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAJir_yrvgJZlbuYgnxV6lpODIAsHwPZQQ",
+  authDomain: "collabolearn-fb.firebaseapp.com",
+  projectId: "collabolearn-fb",
+  storageBucket: "collabolearn-fb.appspot.com",
+  messagingSenderId: "99214946561",
+  appId: "1:99214946561:web:e79c4b456076c730d96b00",
+  measurementId: "G-R2REHSKVCX"
+};
+
+// Initialize Firebase
+global.firebase.initializeApp(firebaseConfig);
+
+
+
+function App() {
+  // <Rightbar />
+
+  const initFirebase = async () => {
+    global.firebase.auth().onAuthStateChanged((user) => {
+      console.log(user);
+    });
+  }
+
+  
+
+  return (
+    <div className="App flex">
+      <Router>
+        <Sidebar />
+        <div className="app-content">
+          <Routes> 
+            <Route exact path="/" element={<Homepage />} />
+            <Route path="/course/:courseid" element={<Coursepage />} />
+            <Route path="/explore" element={<ExplorePage />} />
+            <Route path="/cates" element={<CategoriesPage />} />
+            <Route path="/my-courses" element={<MyCoursesPage />} />
+          </Routes>
+        </div>
+      </Router>
+      
+    </div>
+  );
+}
+
+export default App;

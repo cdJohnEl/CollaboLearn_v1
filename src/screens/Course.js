@@ -8,7 +8,7 @@ import {
 import { MdFullscreen } from "react-icons/md";
 import Course1 from "../ui/course-1.png";
 
-const Coursepage = () => {
+const Coursepage = (props) => {
   const [course, setCourse] = React.useState({
     ID: 1,
     title:
@@ -41,6 +41,8 @@ const Coursepage = () => {
       },
     ],
   });
+
+  // const courseID = props.match.params.courseid;
 
   var courseVideos = [];
   for (let i = 0; i < course.videos.length; i++) {

@@ -1,26 +1,13 @@
-// import logo from './logo.svg';
-import "./css/App.css";
-import "./css/props.css";
+import React, { Component } from 'react'
+import AppRoot from './AppRoot'
+import AppLoader from './AppLoader'
 
-// Screens
-import Header from "./screens/header";
-import Sidebar from "./screens/Sidebar";
-import Homepage from "./screens/Home";
-import Rightbar from "./screens/rightbar";
-import Coursepage from "./screens/Course";
-
-function App() {
-  <Rightbar />
-  return (
-    <div className="App flex">
-      {/* <Header /> */}
-      <Sidebar />
-      <div className="app-content">
-        <Coursepage />
-      </div>
-      
-    </div>
-  );
+function App(){
+  return(
+    <AppRoot>
+      <AppLoader />
+    </AppRoot>
+  )
 }
 
 export default App;
